@@ -87,7 +87,7 @@ jobs:
       #   run: docker push your-docker-image-name:latest  # Replace with your Docker image name
 
       - name: Deploy to Render
-        uses: gonuit/render-docker-deploy@v1.3.3
+        uses: fcollman/render-deploy
         with:
           email: ${{ secrets.RENDER_EMAIL }}
           render_api_key: ${{ secrets.RENDER_API_KEY }}
