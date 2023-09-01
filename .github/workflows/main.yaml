@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Check-out your repository.
+      # Check-out repository.
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -51,8 +51,7 @@ jobs:
           # (Optional, default: "web")
           # Select the process type for which you want the docker container to be uploaded.
           # By default, this argument is set to "web".
-          process_type: web
-          
+          process_type: web  
    
           
 ### ⬆ IMPORTANT PART ⬆ ###
