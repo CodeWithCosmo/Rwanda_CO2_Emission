@@ -30,10 +30,10 @@ jobs:
           
           # render API key associated with provided user's email.
           # Api Key is available under your render account settings.
-          heroku_api_key: ${{ secrets.RENDER_API_KEY }}
+          render_api_key: ${{ secrets.RENDER_API_KEY }}
           
           # Name of the heroku application to which the build is to be sent.
-          heroku_app_name: ${{ secrets.RENDER_APP_NAME }}
+          render_app_name: ${{ secrets.RENDER_APP_NAME }}
 
           # (Optional, default: "./")
           # Dockerfile directory.
@@ -51,7 +51,6 @@ jobs:
           # (Optional, default: "web")
           # Select the process type for which you want the docker container to be uploaded.
           # By default, this argument is set to "web".
-          # For more information look at https://devcenter.heroku.com/articles/process-model
           process_type: web
           
    
