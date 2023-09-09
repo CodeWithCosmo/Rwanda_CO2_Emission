@@ -15,7 +15,7 @@
 3. [VSCodeIDE](https://code.visualstudio.com/)
 4. [ThunderClient](https://www.thunderclient.com/)
 5. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
-6. [Github Account](https://github.com)
+6. [Github](https://github.com)
 7. [Docker](https://www.docker.com/)
 8. [Render](https://render.com/)
 
