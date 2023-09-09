@@ -21,16 +21,25 @@
 
 
 * ## **How to run ?**
-1. ## Create a new environment
+1. ## Building the environment
 ```
 conda create --name venv python=3.8 -y
 ```
-2. ## Activate the newly created environment
+2. ## Activating the environment
 ```
 conda activate venv/
 ```
-3. ## Install the requirements
+3. ## Installing requirements
 ```
 pip install -r requirements.txt
+```
+4. ## Application launch
+[windows] 
+```
+python app.py 
+```
+[macOS or Linux] 
+```
+python3 app.py 
 ```
 
