@@ -24,4 +24,4 @@ def predict():
         return render_template("home.html",prediction_text="This passenger was not survived.".format(output))
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
