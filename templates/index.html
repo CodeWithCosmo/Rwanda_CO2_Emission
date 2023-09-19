@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+<html>
+<head>
     <meta charset="UTF-8">
-    <title>ML API</title>  
-  </head>
-  <body>
-    <div class="login">
-     <h1><center>Titanic Survivors Predictor</center></h1>
-   
-        <!-- Main Input For Receiving Query to our ML -->
-       <form action="{{ url_for('predict')}}"method="post">
-         <center><input type="text" name="Pclass" placeholder="Pclass (1 - 3)" required="required" /></center><br>
-         <center><input type="text" name="Sex" placeholder="Sex (0 = F, 1 = M)" required="required" /></center><br>
-         <center><input type="text" name="Age" placeholder="Age (< 100)" required="required" /></center><br>
-         <center><input type="text" name="Fare" placeholder="Fare (< $1000)" required="required" /></center><br>
-         <center><input type="text" name="Family" placeholder="Family Size (<= 10)" required="required" /></center><br>
-         <center><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></center>
-       </form>
-      <br>
-      <br>       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Titanic Survival Predictor</h1>
+        </header>
+        
+        <main>
+            <form action="{{ url_for('predict') }}" method="post">
+                <fieldset>
+                    <legend>Passenger Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="Pclass">Class:</label>
+                        <input type="number" id="Pclass" name="Pclass" min="1" max="3" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Sex">Gender:</label>
+                        <select id="Sex" name="Sex" required>
+                            <option value="0">Female</option>
+                            <option value="1">Male</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Age">Age:</label>
+                        <input type="number" id="Age" name="Age" min="0" max="100" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Fare">Fare:</label>
+                        <input type="number" id="Fare" name="Fare" min="0" max="500" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Family">Family Members:</label>
+                        <input type="number" id="Family" name="Family" min="0" max="10" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <center><button type="submit">Predict</button></center>
+                    </div>
+                </fieldset>
+            </form>
+            
+            {% if prediction_text %}
+                <div class="prediction">
+                    <center><p> {{ prediction_text }}</p></center>
+                </div>
+            {% endif %}
+        </main>
     </div>
-    <br>
-    <h2>
-      <center><font color="black" size="6">{{prediction_text}}</center></body>
-    </h2>   
-   </body>
+</body>
 </html>

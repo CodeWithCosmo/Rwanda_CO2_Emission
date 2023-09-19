@@ -1,55 +1,105 @@
-body {
-  background-color: #ffffff;
-  font-family: 'Arimo', sans-serif;
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+form {
+    margin: 0;
+    padding: 0;
 }
-
-.login {
-  background-color: #43405e;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
 h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 28px;
-  text-align: center;
-  color: #000000;
+    text-align: center;
+    font-weight: 900;
 }
-h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 28px;
-  text-align: center;
-  font-weight: 800;
-  color: #000000;
+
+/* Apply a background color and set font styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+legend {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Center the main container */
+.container {
+    max-width: 700px;
+    max-height: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    
+}
+
+/* Style the header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the main content area */
+main {
+    padding: 50px;
 }
 
 form {
-  text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #d1d2ce;
+    border-radius: 10px;
+  }
+/* Style form labels */
+label {
+    font-weight: bold;
 }
 
-input[type="text"] {
-  padding: 10px;
-  width: 80%;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
+/* Style form inputs and select boxes */
+input[type="number"]
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #ba100d;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  font-size: 18px;
-  cursor: pointer;
+/* Style form buttons */
+button[type="submit"] {
+    background-color: #550e0e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 3px;
 }
 
-button:hover {
-  background-color: #2980b9;
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
+
+/* Style the result display area */
+.prediction {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    border-radius: 5px;
+    color: #3c763d;
+}
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Add more styles as needed for specific elements or responsiveness */
