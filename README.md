@@ -23,11 +23,11 @@
 * ## **How to run ?**
 1. ## Building the environment
 ```
-conda create --name venv python=3.8 -y
+conda create -p env/titanic python=3.8 -y
 ```
 2. ## Activating the environment
 ```
-conda activate venv/
+conda activate env/titanic
 ```
 3. ## Installing requirements
 ```
