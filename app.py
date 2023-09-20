@@ -1,12 +1,13 @@
 import pickle
 import pandas as pd
+#from waitress import serve
 from flask import Flask,request,app,render_template
 
 app=Flask(__name__)
 
 ##! Loading the model
-scaler=pickle.load(open('scaling.pkl','rb'))
-model=pickle.load(open('classifier.pkl','rb'))
+scaler=pickle.load(open('artifacts/scaling.pkl','rb'))
+model=pickle.load(open('artifacts/classifier.pkl','rb'))
 
 @app.route('/')
 def home():
@@ -28,5 +29,6 @@ def predict():
     else:
         return render_template("index.html",prediction_text="This passenger was not survived.")
 
-if __name__=="__main__":
-    app.run(debug=True)
+#if __name__=="__main__":
+#	app.run(debug=True)
+#	serve(app, host = '0.0.0.0', port=5000, threads=2)
