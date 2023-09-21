@@ -23,23 +23,13 @@
 * ## **How to run ?**
 1. ## Building the environment
 ```
-conda create -p env/titanic python=3.8 -y
+conda create -n titanic python=3.8 -y
 ```
 2. ## Activating the environment
 ```
-conda activate env/titanic
+conda activate titanic
 ```
 3. ## Installing requirements
 ```
 pip install -r requirements.txt
 ```
-4. ## Application launch
-[windows] 
-```
-python app.py 
-```
-[macOS or Linux] 
-```
-python3 app.py 
-```
-
