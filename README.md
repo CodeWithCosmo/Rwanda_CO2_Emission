@@ -1,6 +1,6 @@
 # **`Titanic Disaster Survivor Prediction Model`**
 
-<img src ="https://news.artnet.com/app/news-upload/2023/04/Willy-Stoewer_Titanic_1912-1024x697.jpg" width = 1000 height = 500>
+<img src ="https://news.artnet.com/app/news-upload/2023/04/Willy-Stoewer_Titanic_1912-1024x697.jpg" width = 1000 height = 400>
 
 ## The sinking of the Titanic is one of the most infamous shipwrecks in history.
 
